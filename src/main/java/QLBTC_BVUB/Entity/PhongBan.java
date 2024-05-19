@@ -1,4 +1,4 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 
 import QLBTC_BVUB.Error.ErrorDB;
 import jakarta.persistence.*;

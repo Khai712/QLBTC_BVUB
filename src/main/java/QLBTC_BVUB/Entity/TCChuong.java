@@ -1,8 +1,7 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 
 import QLBTC_BVUB.Error.ErrorDB;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;

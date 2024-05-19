@@ -1,4 +1,4 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -12,11 +12,14 @@ public class Anh {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "danhgia_id", referencedColumnName = "id", nullable = false)
-    private DanhGia danhGia;
+    @ManyToOne
+    @JoinColumn(name = "nhanvien_danhgia_id")
+    private NhanVien_DanhGia nhanVienDanhGia;
 
-    // Thêm các trường dữ liệu khác của ảnh
+    @Column(name = "ten_anh")
+    private String tenanh;
+
     @Column(name = "duong_dan")
     private String duongDan;
+
 }

@@ -1,4 +1,4 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 
 import QLBTC_BVUB.Error.ErrorDB;
 import jakarta.persistence.*;
@@ -8,6 +8,8 @@ import lombok.Data;
 
 import java.util.Set;
 
+import static QLBTC_BVUB.Error.SetSizeNvarchar.DB_NVARCHARMAX;
+
 @Data
 @Entity
 @Table(name = "tcphan")
@@ -16,9 +18,9 @@ public class TCPhan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "noidung")
+    @Column(name = "noidung",columnDefinition = DB_NVARCHARMAX)
     @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
-    @Size(max = 500, min = 1, message =  ErrorDB.DB_500CHARACTERS)
+    @Size( min = 1, message =  ErrorDB.DB_500CHARACTERS)
     private String noidung;
     //--------------------------Relationship------------------------
 

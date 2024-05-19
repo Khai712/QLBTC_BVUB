@@ -1,4 +1,4 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 
 import QLBTC_BVUB.Error.ErrorDB;
 import jakarta.persistence.*;
@@ -7,8 +7,9 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Set;
+
+import static QLBTC_BVUB.Error.SetSizeNvarchar.DB_NVARCHARMAX;
 
 @Data
 @Entity
@@ -18,9 +19,9 @@ public class DanhGia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "noidung")
+    @Column(name = "noidung", columnDefinition = DB_NVARCHARMAX)
     @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
-    @Size(max = 500, min = 1, message =  ErrorDB.DB_500CHARACTERS)
+    @Size( min = 1, message =  ErrorDB.DB_500CHARACTERS)
     private String noiDung;
 
     @Column(name = "ngay_dang")
@@ -41,6 +42,8 @@ public class DanhGia {
 
     //--------------------------Relationship------------------------
 
-    @OneToMany(mappedBy = "danhGia")
-    private Set<Anh> anhs;
+
+    @OneToMany(mappedBy = "danhGiaid")
+    private Set<NhanVien_DanhGia> Danhgia_NhanViens;
+
 }

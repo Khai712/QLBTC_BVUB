@@ -1,4 +1,4 @@
-package QLBTC_BVUB.Model;
+package QLBTC_BVUB.Entity;
 import QLBTC_BVUB.Error.ErrorDB;
 import QLBTC_BVUB.Validator.Annotation.ValidUsername;
 import jakarta.persistence.*;
@@ -9,7 +9,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.Getter;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Date;
 import java.util.HashSet;
@@ -87,8 +86,8 @@ public class NhanVien {
 
     //--------------------------Relationship------------------------
 
-    @ManyToMany(mappedBy = "nhanViens")
-    private Set<DanhGia> danhGias = new HashSet<>();
+    @OneToMany(mappedBy = "nhanVienid")
+    private Set<NhanVien_DanhGia> nhanVien_danhGias;
 
     @OneToMany(mappedBy = "nhanVien_id")
     private Set<DanhGia> taodanhGias;
