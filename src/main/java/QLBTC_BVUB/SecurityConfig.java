@@ -4,14 +4,15 @@ import QLBTC_BVUB.Service.CustomUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -21,31 +22,36 @@ public class SecurityConfig {
 
         return new CustomUserDetailService();
     }
+
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService());
+        // Không sử dụng encoder
+        authProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+        return authProvider;
+    }
+  /*  @Bean
+   public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
     @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
+   public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
         auth.setUserDetailsService(userDetailsService());
-        auth.setPasswordEncoder(passwordEncoder());
-        return auth;
-    }
+      auth.setPasswordEncoder(passwordEncoder());
+       return auth;
+    }*/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws
             Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/css/**", "/js/**", "/", "/Register",
-                                "/error","/img/**","/truyen/**","/chuong/**",
-                                "/Truyen/**","/category/**","/search-results","/review/**")
-                        .permitAll()
-                        .requestMatchers( "/manga/edit", "/manga/delete")
-                        .hasAnyAuthority("ADMIN","CTV")
-                        .requestMatchers("/manga", "/manga/add","/admin")
-                        .permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers( "/css/**", "/js/**", "/", "/register",
+                                "/error","/image/**",("/list/**"))
+                      .permitAll()
+                      .anyRequest()
+                      .authenticated()
                 )
                 .logout(logout -> logout.logoutUrl("/logout")
                         .logoutSuccessUrl("/login")

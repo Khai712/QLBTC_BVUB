@@ -31,7 +31,7 @@ button {
 }
 
 body {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 input,
@@ -66,7 +66,7 @@ img {
 .login__form {
   position: relative;
   background-color: hsla(200, 50%, 2%, 0.1);
-  border: 2px solid var(--white-color);
+  border: 2px solid var(--black-color);
   margin-inline: 1.5rem;
   padding: 2.5rem 1.5rem;
   border-radius: 1rem;
@@ -89,7 +89,7 @@ img {
   grid-template-columns: max-content 1fr;
   align-items: center;
   column-gap: 0.75rem;
-  border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid var(--black-color);
 }
 .login__icon, .login__eye {
   font-size: 1.25rem;
@@ -98,7 +98,7 @@ img {
   width: 100%;
   padding-block: 0.8rem;
   background: none;
-  color: var(--white-color);
+  color: var(--black-color);
   position: relative;
   z-index: 1;
 }
@@ -141,7 +141,7 @@ img {
   height: 16px;
 }
 .login__forgot {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .login__forgot:hover {
   text-decoration: underline;
@@ -159,7 +159,7 @@ img {
   text-align: center;
 }
 .login__register a {
-  color: var(--white-color);
+  color: var(--black-color);
   font-weight: var(--font-medium);
 }
 .login__register a:hover {

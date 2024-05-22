@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+    <title>Sign Up</title>
+</head>
+<body style="background: #f6f7fc;">
+<div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-6 col-md-8 col-xl-5">
+            <div class="card shadow" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+                    <h3>Sign up to <strong>Bookstore</strong></h3>
+                    <p class="mb-4 text-secondary">Welcome </p>
+                    <form action="/register" method="post">
+                        <div>
+                            <label for="cccd">CCCD:</label>
+                            <input type="text" id="cccd" name="cccd" required>
+                        </div>
+                        <div>
+                            <label for="sdt">Phone Number:</label>
+                            <input type="text" id="sdt" name="sdt" required>
+                        </div>
+                        <div>
+                            <label for="avatar_url">Avatar URL:</label>
+                            <input type="text" id="avatar_url" name="avatar_url">
+                        </div>
+                        <div>
+                            <label for="gioitinh">Gender:</label>
+                            <input type="text" id="gioitinh" name="gioitinh">
+                        </div>
+                        <div>
+                            <label for="machucvu">Position:</label>
+                            <input type="text" id="machucvu" name="machucvu" required>
+                        </div>
+                        <div>
+                            <label for="ngaysinh">Date of Birth:</label>
+                            <input type="date" id="ngaysinh" name="ngaysinh" required>
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div>
+                            <label for="quequan">Hometown:</label>
+                            <input type="text" id="quequan" name="quequan">
+                        </div>
+                        <div>
+                            <label for="tencv">Job Title:</label>
+                            <textarea id="tencv" name="tencv" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label for="tennv">Full Name:</label>
+                            <textarea id="tennv" name="tennv" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div>
+                            <label for="phongban_id">Department ID:</label>
+                            <input type="text" id="phongban_id" name="phongban_id" required>
+                        </div>
+                        <button type="submit">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
