@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/them_chuong}" method="post">
+    <select ></select>
+    <label for="name">Tên Chương:</label><br>
+    <input type="text" id="name" name="name" th:field="${tcChuongs.noidung}"><br>
+    <input type="submit" value="Gửi">
+</form>
+
+</body>
+</html>

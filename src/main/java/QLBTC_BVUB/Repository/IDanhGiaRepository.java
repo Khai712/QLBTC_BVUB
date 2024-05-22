@@ -8,7 +8,4 @@ import java.util.*;
 @Repository
 public interface IDanhGiaRepository extends JpaRepository<DanhGia,Long>{
 
-
-    List<DanhGia> getDanhGiaByPhongBanID(Long phongBan_id);
-
 }
