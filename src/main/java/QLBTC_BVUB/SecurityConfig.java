@@ -50,7 +50,9 @@ public class SecurityConfig {
                         .requestMatchers( "/css/**", "/js/**", "/", "/register",
                                 "/error","/image/**",("/list/**"))
                       .permitAll()
-                      .anyRequest()
+                        .requestMatchers( "/them-phan", "/them-chuong","/them-tieu-muc")
+                        .hasAnyAuthority("1","2")
+                        .anyRequest()
                       .authenticated()
                 )
                 .logout(logout -> logout.logoutUrl("/logout")

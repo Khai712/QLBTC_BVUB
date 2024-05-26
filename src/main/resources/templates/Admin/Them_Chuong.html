@@ -5,10 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<form th:action="@{/them_chuong}" method="post">
-    <select ></select>
+<form th:action="@{/them-chuong}" method="post">
+    <select name="phan" id="phan_id" class="form-control" th:field="${newChuong.tcPhan.id}">
+        <option value="">Chọn Phần</option>
+        <option th:each="phan : ${phans}" th:value="${phan.id}" th:text="${phan.noidung}"></option>
+    </select>
     <label for="name">Tên Chương:</label><br>
-    <input type="text" id="name" name="name" th:field="${tcChuongs.noidung}"><br>
+    <input type="text" id="name" name="name" th:field="${newChuong.noidung}"><br>
     <input type="submit" value="Gửi">
 </form>
 
