@@ -1,0 +1,606 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+
+    <!-- Sidebar wrapper start -->
+    <div th:replace="admin/fragments/sidebar::sidebar"></div>
+    <!-- Sidebar wrapper end -->
+
+    <!-- Page content start  -->
+    <div class="page-content">
+
+        <!-- Header start -->
+        <div th:replace="admin/fragments/header::header"></div>
+        <!-- Header end -->
+
+        <!-- Page header start -->
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+
+            </ol>
+
+            <ul class="app-actions">
+                <li>
+                    <a href="#" id="reportrange">
+                        <span class="range-text"></span>
+                        <i class="icon-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+                        <i class="icon-print"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Download CSV">
+                        <i class="icon-cloud_download"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Page header end -->
+
+        <!-- Main container start -->
+        <div class="main-container">
+
+            <!-- Row start -->
+            <div class="row gutters">
+                <div class="col-sm-12">
+                    <div class="table-container">
+                        <div class="t-header">Details Evaluation Collab</div>
+                        <div class="table-responsive">
+                            <table id="copy-print-csv" class="table custom-table">
+                                <thead>
+                                <tr>
+
+                                    <th>Index</th>
+                                    <th>Department Main</th>
+                                    <th>Department Main Self-Assessment</th>
+                                    <th>Department Management criteria Assessment</th>
+                                    <th>Department Secondary</th>
+                                    <th>Department Secondary</th>
+                                    <th>Department Management criteria Assessment</th>
+                                    <th>Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Pharmacy</td>
+                                    <td><button type="text" class="input_index" disabled>3</button></td>
+                                    <td><button type="text" class="input_index" disabled>3</button></td>
+                                    <td>Information Technology</td>
+                                    <td><button type="text" class="input_index" disabled>4</button></td>
+                                    <td><button type="text" class="input_index" disabled>4</button></td>
+                                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target=".bd-example-modal-xl">Details</button>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- start modal details of Evaluation -->
+                            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
+                                 aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="myExtraLargeModalLabel">A1.1 - Người bệnh
+                                                được chỉ dẫn rõ ràng, đón tiếp và hướng dẫn khoa học, cụ thể </h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="table-container">
+                                                <div class="t-header">Pharmacy</div>
+                                                <div class="table-responsive">
+                                                    <table id="fixedHeader" class="table custom-table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Level</th>
+                                                            <th>STT</th>
+                                                            <th>Description</th>
+                                                            <th>Department Self-Assessment</th>
+                                                            <th>Department Management criteria Assessment</th>
+
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>Thiếu biển hiệu bệnh viện hoặc biển hiệu bị mất
+                                                                chữ, mất
+                                                                nét, méo, xệ.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>Chưa có bàn/quầy và nhân viên đón tiếp, hướng
+                                                                dẫn người
+                                                                bệnh.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>Cổng bệnh viện được đánh số: nếu bệnh viện có
+                                                                một cổng không
+                                                                đánh số; nếu có từ 2 cổng trở lên thì cổng chính
+                                                                tiếp đón
+                                                                người bệnh ghi rõ “Cổng số 1”. Các cổng phụ ghi
+                                                                rõ từng số
+                                                                theo một chiều thống nhất từ trái sang phải hoặc
+                                                                từ phải
+                                                                sang trái. Đối với cổng nội bộ có chỉ dẫn rõ
+                                                                ràng “cổng nội
+                                                                bộ cho nhân viên bệnh viện”.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td> Có đầy đủ sơ đồ bệnh viện tại các điểm giao cắt
+                                                                chính trong
+                                                                bệnh viện; có dấu hiệu hoặc chỉ dẫn vị trí người
+                                                                xem sơ đồ
+                                                                đang đứng ở vị trí nào trong sơ đồ.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>5</td>
+                                                            <td>Áp dụng thẻ điện tử và máy tính giá tiền trông
+                                                                giữ xe máy, ô
+                                                                tô hoặc bệnh viện trông xe miễn phí.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="table-container">
+                                                <div class="t-header">Information Technology</div>
+                                                <div class="table-responsive">
+                                                    <table id="basicExample" class="table custom-table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Level</th>
+                                                            <th>STT</th>
+                                                            <th>Description</th>
+                                                            <th>Department Self-Assessment</th>
+                                                            <th>Department Management criteria Assessment</th>
+
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>Thiếu biển hiệu bệnh viện hoặc biển hiệu bị mất
+                                                                chữ, mất
+                                                                nét, méo, xệ.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>Chưa có bàn/quầy và nhân viên đón tiếp, hướng
+                                                                dẫn người
+                                                                bệnh.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>Cổng bệnh viện được đánh số: nếu bệnh viện có
+                                                                một cổng không
+                                                                đánh số; nếu có từ 2 cổng trở lên thì cổng chính
+                                                                tiếp đón
+                                                                người bệnh ghi rõ “Cổng số 1”. Các cổng phụ ghi
+                                                                rõ từng số
+                                                                theo một chiều thống nhất từ trái sang phải hoặc
+                                                                từ phải
+                                                                sang trái. Đối với cổng nội bộ có chỉ dẫn rõ
+                                                                ràng “cổng nội
+                                                                bộ cho nhân viên bệnh viện”.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td> Có đầy đủ sơ đồ bệnh viện tại các điểm giao cắt
+                                                                chính trong
+                                                                bệnh viện; có dấu hiệu hoặc chỉ dẫn vị trí người
+                                                                xem sơ đồ
+                                                                đang đứng ở vị trí nào trong sơ đồ.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>5</td>
+                                                            <td>Áp dụng thẻ điện tử và máy tính giá tiền trông
+                                                                giữ xe máy, ô
+                                                                tô hoặc bệnh viện trông xe miễn phí.</td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                            <td>
+                                                                <section class="task-list">
+                                                                    <!-- Task #1 -->
+                                                                    <div class="task-block">
+                                                                        <div class="task-checkbox">
+                                                                            <input type="checkbox"
+                                                                                   name="task_00">
+                                                                            <div class="ripple-container">
+                                                                                <div class="check-off"></div>
+                                                                                <div class="check-on">
+                                                                                    <i class="icon-check1"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </td>
+                                                        </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-delete"
+                                                    data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-delete	">Clear
+                                                All</button>
+                                            <button type="button" class="btn btn-detail">Select
+                                                All</button>
+                                            <button type="button" class="btn btn-detail">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end modal details of Evaluation -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row end -->
+        </div>
+        <!-- Main container end -->
+
+    </div>
+    <!-- Page content end -->
+
+</div>
+<!-- Page wrapper end -->
+
+<div th:replace="admin/fragments/script::script"></div>
+</body>
+
+</html>

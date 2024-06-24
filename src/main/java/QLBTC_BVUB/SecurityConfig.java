@@ -50,7 +50,7 @@ public class SecurityConfig {
                         .requestMatchers( "/css/**", "/js/**", "/", "/register",
                                 "/error","/image/**",("/list/**"))
                       .permitAll()
-                        .requestMatchers( "/them-phan", "/them-chuong","/them-tieu-muc")
+                        .requestMatchers( "/them-phan", "/them-chuong","/them-tieu-muc","/them-muc","/evaluation")
                         .hasAnyAuthority("1","2")
                         .anyRequest()
                       .authenticated()

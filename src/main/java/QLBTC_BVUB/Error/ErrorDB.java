@@ -7,6 +7,6 @@ public class ErrorDB {
     public static final String DB_13CHARACTERS=  "Title must be less than 13 characters.";
     public static final String DB_REQUIRED=  "This is required.";
     public static final String DB_50CHARACTERS=  "Title must be less than 50 characters.";
-
+    public static final String DB_MIN1= "Muc must be greater than or equal to 1";
     public static final String DB_BLANK =  "Please ensure the field is not left blank.";
 }

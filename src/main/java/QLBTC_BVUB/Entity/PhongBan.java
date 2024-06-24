@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.Getter;
 
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -29,10 +30,13 @@ public class PhongBan {
     @Size(max = 200,message = ErrorDB.DB_200CHARACTERS)
     @Getter
     private String diachipb;
+
+
+
     //--------------------------Relationship------------------------
 
-    @OneToMany(mappedBy = "phongBan_id")
-    private Set<DanhGia> danhGias;
+    @OneToMany(mappedBy = "phongBan")
+    private List<DanhGia> danhGias;
 
     @OneToMany(mappedBy = "phongBan")
     private Set<NhanVien> nhanViens;

@@ -1,6 +1,7 @@
 package QLBTC_BVUB.Service;
 
 import QLBTC_BVUB.Entity.NhanVien;
+import QLBTC_BVUB.Entity.NhanVien_DanhGia;
 import QLBTC_BVUB.Repository.IUserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.constraints.NotNull;
@@ -21,6 +22,15 @@ public class UserService {
     @Transactional
     public void save(@NotNull NhanVien user) {
         userRepository.save(user);
+    }
+
+    public Long getUserIdByUsername(String currentUsername) {
+        NhanVien user = userRepository.findByUsername(currentUsername);
+        return (user != null) ? user.getId() : null;
+    }
+
+    public NhanVien getNhanVienbyId(Long currentUserId) {
+        return userRepository.findById(currentUserId).orElse(null);
     }
 }
 

@@ -1,0 +1,262 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+
+    <!-- Sidebar wrapper start -->
+    <div th:replace="admin/fragments/sidebar::sidebar"></div>
+    <!-- Sidebar wrapper end -->
+
+    <!-- Page content start  -->
+    <div class="page-content">
+
+        <!-- Header start -->
+        <div th:replace="admin/fragments/header::header"></div>
+        <!-- Header end -->
+
+        <!-- Page header start -->
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Dashboards</li>
+
+            </ol>
+
+            <ul class="app-actions">
+                <li>
+                    <a href="#" id="reportrange">
+                        <span class="range-text"></span>
+                        <i class="icon-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+                        <i class="icon-print"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Download CSV">
+                        <i class="icon-cloud_download"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Page header end -->
+
+        <!-- Main container start -->
+        <div class="main-container">
+
+            <!-- Row start -->
+            <div class="row gutters">
+                <div class="col-sm-12">
+
+                    <div class="table-container">
+                        <div class="t-header">Items of Chapter A1</div>
+                        <div class="table-responsive">
+                            <table id="basicExample" class="table custom-table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Change</th>
+                                    <th scope="col">Delete</th>
+                                    <th scope="col">Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <th>A1.1</th>
+
+                                    <td>Người bệnh được chỉ dẫn rõ ràng, đón tiếp và hướng dẫn khoa học, cụ thể
+                                    </td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <th>A1.2</th>
+
+                                    <td> Người bệnh, người nhà người bệnh được chờ đợi trong phòng đầy đủ tiện
+                                        nghi và được vận chuyển phù hợp với tình trạng bệnh tật</td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <th>A1.3</th>
+                                    <td>Cải tiến quy trình khám bệnh, đáp ứng sự hài lòng người bệnh </td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <th>A1.4</th>
+
+                                    <td>Bệnh viện bảo đảm các điều kiện cấp cứu người bệnh kịp thời</td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <th>A1.5</th>
+
+                                    <td>Người bệnh được làm các thủ tục đăng ký, khám bệnh theo đúng thứ tự bảo
+                                        đảm tính công bằng và mức ưu tiên</td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <th>A1.6</th>
+
+                                    <td>Người bệnh được hướng dẫn và bố trí làm xét nghiệm, chẩn đoán hình ảnh,
+                                        thăm dò chức năng theo trình tự thuận tiện</td>
+                                    <td><button class="btn btn-detail" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                    <td><a href="/details-item"><button
+                                            class="btn btn-detail">Details</button></a></td>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Modal change -->
+                        <div class="modal fade" id="ChangefooterCenterBtnsModal" tabindex="-1" role="dialog"
+                             aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ChangefooterCenterBtnsModalLabel">Change Item</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Item</label>
+                                                <input type="text" class="form-control" id="fullName" placeholder="Enter Item">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">Description Item</label>
+                                                <textarea class="form-control" id="message-text" placeholder="Enter Description Item"></textarea>
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-delete"
+                                                data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-detail">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Modal change -->
+
+                        <!-- Modal addition -->
+                        <a href="/details-part"><button type="button"
+                                                        class="btn btn-detail btn-lg">Back</button></a>
+                        <button type="button" class="btn btn-detail" data-toggle="modal"
+                                data-target="#footerCenterBtnsModal">
+                            Addition
+                        </button>
+                        <div class="modal fade" id="footerCenterBtnsModal" tabindex="-1" role="dialog"
+                             aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="footerCenterBtnsModalLabel">Addtion Item</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row gutters">
+                                            <div class="col-sm-6 col-12">
+
+
+                                                <div class="form-group">
+                                                    <label for="phone">Item</label>
+                                                    <input type="text" class="form-control" id="phone"
+                                                           placeholder="Enter Item">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="website">Description Content Evaluation</label>
+                                                    <input type="url" class="form-control" id="website"
+                                                           placeholder="Enter Description Content">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-12">
+
+                                                <div class="form-group">
+                                                    <label for="sTate">Description Item</label>
+                                                    <input type="text" class="form-control" id="sTate"
+                                                           placeholder="Enter Description Item">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="zIp">Level</label>
+                                                    <input type="number" class="form-control" id="zIp"
+                                                           placeholder="Enter Level">
+                                                </div>
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" checked
+                                                           id="customSwitch3">
+                                                    <label class="custom-control-label"
+                                                           for="customSwitch3">Witness</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-delete"
+                                                data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-detail">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row end -->
+
+        </div>
+        <!-- Main container end -->
+
+    </div>
+    <!-- Page content end -->
+
+</div>
+<!-- Page wrapper end -->
+
+<div th:replace="admin/fragments/script::script"></div>
+
+</body>
+
+</html>

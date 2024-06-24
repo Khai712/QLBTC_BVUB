@@ -1,0 +1,234 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+
+    <!-- Sidebar wrapper start -->
+    <div th:replace="admin/fragments/sidebar::sidebar"></div>
+    <!-- Sidebar wrapper end -->
+
+    <!-- Page content start  -->
+    <div class="page-content">
+
+        <!-- Header start -->
+        <div th:replace="admin/fragments/header::header"></div>
+        <!-- Header end -->
+
+        <!-- Page header start -->
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+
+            </ol>
+
+            <ul class="app-actions">
+                <li>
+                    <a href="#" id="reportrange">
+                        <span class="range-text"></span>
+                        <i class="icon-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+                        <i class="icon-print"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Download CSV">
+                        <i class="icon-cloud_download"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Page header end -->
+
+        <!-- Main container start -->
+        <div class="main-container">
+
+            <!-- Row start -->
+            <div class="row gutters">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+
+                            <div class="pricing-cost">A1</div>
+                            <div class="pricing-save">CHỈ DẪN, ĐÓN TIẾP, HƯỚNG DẪN NGƯỜI BỆNH (6)</div>
+
+                        </div>
+
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-detail btn-lg" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</a>
+                            <a href="#" class="btn btn-delete btn-lg">Delete</a>
+                            <a href="/details-chapter" class="btn btn-detail btn-lg">Details</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+
+                            <div class="pricing-cost">A2</div>
+                            <div class="pricing-save">ĐIỀU KIỆN CƠ SỞ VẬT CHẤT PHỤC VỤ NGƯỜI BỆNH (5)</div>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-detail btn-lg" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</a>
+                            <a href="#" class="btn btn-delete btn-lg">Delete</a>
+                            <a href="/details-chapter" class="btn btn-detail btn-lg">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+
+                            <div class="pricing-cost">A3</div>
+                            <div class="pricing-save">ĐIỀU KIỆN CHĂM SÓC NGƯỜI BỆNH (2)</div>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-detail btn-lg" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</a>
+                            <a href="#" class="btn btn-delete btn-lg">Delete</a>
+                            <a href="/details-chapter" class="btn btn-detail btn-lg">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="pricing-plan">
+                        <div class="pricing-header">
+
+                            <div class="pricing-cost">A4</div>
+                            <div class="pricing-save">QUYỀN VÀ LỢI ÍCH CỦA NGƯỜI BỆNH (6)</div>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="#" class="btn btn-detail btn-lg" data-toggle="modal" data-target="#ChangefooterCenterBtnsModal">Change</a>
+                            <a href="#" class="btn btn-delete btn-lg">Delete</a>
+                            <a href="/details-chapter" class="btn btn-detail btn-lg">Details</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Row end -->
+
+            </div>
+            <!-- Main container end -->
+            <!-- Modal Change -->
+            <div class="modal fade" id="ChangefooterCenterBtnsModal" tabindex="-1" role="dialog"
+                 aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ChangefooterCenterBtnsModalLabel">Change Chapter</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label >Chapter</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Enter Chapter">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Description Chapter</label>
+                                    <textarea class="form-control" id="message-text" placeholder="Enter Description Chapter"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-delete"
+                                    data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-detail">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Modal Change -->
+            <a href="/part"><button type="button" class="btn btn-detail btn-lg">Back</button></a>
+            <button type="button" class="btn btn-detail" data-toggle="modal" data-target="#footerCenterBtnsModal">
+                Addition
+            </button>
+
+            <div class="modal fade" id="footerCenterBtnsModal" tabindex="-1" role="dialog"
+                 aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="footerCenterBtnsModalLabel">Addtion Chapter</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="row gutters">
+                                <div class="col-sm-6 col-12">
+
+                                    <div class="form-group">
+                                        <label for="eMail">Chapter</label>
+                                        <input type="email" class="form-control" id="eMail"
+                                               placeholder="Enter Description Chapter">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Item</label>
+                                        <input type="text" class="form-control" id="phone" placeholder="Enter Item">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website">Description Content Evaluation</label>
+                                        <input type="url" class="form-control" id="website"
+                                               placeholder="Enter Description Content">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12">
+
+                                    <div class="form-group">
+                                        <label for="ciTy">Description Chapter</label>
+                                        <input type="name" class="form-control" id="ciTy"
+                                               placeholder="Enter Description Part">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sTate">Description Item</label>
+                                        <input type="text" class="form-control" id="sTate"
+                                               placeholder="Enter Description Item">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="zIp">Level</label>
+                                        <input type="number" class="form-control" id="zIp"
+                                               placeholder="Enter Level">
+                                    </div>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" checked
+                                               id="customSwitch3">
+                                        <label class="custom-control-label" for="customSwitch3">Witness</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-delete" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-detail">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main container end -->
+
+    </div>
+    <!-- Page content end -->
+
+</div>
+<!-- Page wrapper end -->
+
+<div th:replace="admin/fragments/script::script"></div>
+</body>
+
+</html>

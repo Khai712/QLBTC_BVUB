@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <style>
+        /* CSS cho phần giao diện */
+        /* Có thể tùy chỉnh để phù hợp với thiết kế của bạn */
+    </style>
+</head>
+<body>
+<h1>Add Data Form</h1>
+<form id="dataForm" action="/postmappingendpoint" method="post">
+    <div id="inputFields">
+        <!-- Trường nhập dữ liệu -->
+        <input type="text" name="data[]" placeholder="Enter data">
+        <input type="text" name="data[]" placeholder="Enter data">
+        <select class="js-example-basic-single" name="state">
+            <option th:each="pb : ${phongban}" th:value="${pb.id}" th:text="${pb.tenpb}"></option>
+        </select>
+    </div>
+    <button type="button" onclick="addInputField()">Add Row</button>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function addInputField() {
+        // Tạo một trường nhập dữ liệu mới và thêm vào phần tử "inputFields"
+        var inputFields = document.getElementById("inputFields");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "data[]";
+        input.placeholder = "Enter data";
+        var input2 = document.createElement("input2");
+        input.type = "text";
+        input.name = "data[]";
+        input.placeholder = "Enter data";
+        inputFields.appendChild(input);
+        inputFields.appendChild(input2);
+    }
+</script>
+</body>
+</html>

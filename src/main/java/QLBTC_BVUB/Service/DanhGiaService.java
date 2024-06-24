@@ -1,6 +1,7 @@
 package QLBTC_BVUB.Service;
 
 import QLBTC_BVUB.Entity.DanhGia;
+import QLBTC_BVUB.Entity.PhongBan;
 import QLBTC_BVUB.Repository.IDanhGiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,4 +17,12 @@ public class DanhGiaService {
     {
         return danhGiaRepository.findAll();
     }
+
+    public DanhGia save(DanhGia danhGia) {
+        return danhGiaRepository.save(danhGia);
+    }
+    public List<DanhGia> getDanhGiaByphongBan_id(PhongBan phongBan) {
+        return danhGiaRepository.findDanhGiaByPhongBan(phongBan);
+    }
+
 }

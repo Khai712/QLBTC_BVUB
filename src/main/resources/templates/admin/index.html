@@ -1,0 +1,325 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+	<!-- Page wrapper start -->
+	<div class="page-wrapper">
+
+		<!-- Sidebar wrapper start -->
+		<div th:replace="admin/fragments/sidebar::sidebar"></div>
+		<!-- Sidebar wrapper end -->
+
+		<!-- Page content start  -->
+		<div class="page-content">
+
+			<!-- Header start -->
+			<div th:replace="admin/fragments/header::header"></div>
+			<!-- Header end -->
+
+			<!-- Page header start -->
+			<div class="page-header">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">Dashboards</li>
+					
+				</ol>
+
+				<ul class="app-actions">
+					<li>
+						<a href="#" id="reportrange">
+							<span class="range-text"></span>
+							<i class="icon-chevron-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+							<i class="icon-print"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="tooltip" data-placement="top" title=""
+							data-original-title="Download CSV">
+							<i class="icon-cloud_download"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Page header end -->
+
+			<!-- Main container start -->
+			<div class="main-container">
+
+				<!-- Row start -->
+				<div class="row gutters">
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon">
+								<i class="icon-account_circle"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>800</h3>
+								<p>Total Users</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon">
+								<i class="icon-location_city"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>30</h3>
+								<p>Total Department</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon">
+								<i class="icon-check_circle"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>15</h3>
+								<p>Evaluation Single Approved</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon secondary">
+								<i class="icon-circle-with-cross"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>15</h3>
+								<p>Evaluation Single not Approved</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon">
+								<i class="icon-check_circle"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>8</h3>
+								<p>Evaluation Collab Approved</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2 col-sm-4 col-6">
+						<div class="info-tiles">
+							<div class="info-icon secondary">
+								<i class="icon-circle-with-cross"></i>
+							</div>
+							<div class="stats-detail">
+								<h3>7</h3>
+								<p>Evaluation Collab not Approved</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row ends -->
+
+				<!-- Row starts -->
+				<div class="row gutters">
+					<div class="col-xl-6 col-sm-12 col-12">
+						<div class="card h-280">
+							<div class="card-header">
+								<div class="card-title">Total Number of Criteria Applied for Assessment (83
+									Criteria)</div>
+							</div>
+							<div class="card-body">
+								<div class="card h-280">
+									<div class="card-body pb-0">
+										<div id="avg-handle-time"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-sm-12 col-12">
+						<div class="card h-280">
+							<div class="card-header">
+								<div class="card-title">Total Score of Applicable Criteria (385 Score)</div>
+							</div>
+							<div class="card-body">
+								<div class="card h-280">
+									<div class="card-body pb-0">
+										<div id="compare-sales"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- Row end -->
+
+				<!-- Row starts -->
+				<div class="row gutters">
+					<div class="col-xl-6 col-sm-12 col-12">
+						<div class="card h-280">
+							<div class="card-header">
+								<div class="card-title">Overall Average Score of Criteria</div>
+							</div>
+							<div class="card-body">
+								<div class="card h-280">
+									<div class="card-body pb-0">
+										<div id="support-requests"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-6 col-sm-12 col-12">
+						<div class="card h-280">
+							<div class="card-header">
+								<div class="card-title">Ratio of Applied Criteria to 83 Criteria (2020-2023)</div>
+							</div>
+							<div class="card-body">
+								<div class="card h-320">
+									<div class="card-body pb-0">
+										<div id="tasks"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Row ends -->
+				<!-- Row starts -->
+				<div class="row gutters">
+					<div class="col-sm-12">
+						<div class="table-container">
+							<div class="t-header">General results divided by level</div>
+							<div class="table-responsive">
+								<table id="basicExample" class="table custom-table">
+									<thead>
+										<tr>
+											<th>Index</th>
+											<th>Year</th>
+											<th>Details</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2020</td>
+											<td> <button type="button" class="btn btn-detail" data-toggle="modal"
+													data-target=".bd-example-modal-xl">Details</button></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2021</td>
+											<td> <button type="button" class="btn btn-detail" data-toggle="modal"
+													data-target=".bd-example-modal-xl">Details</button></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>2022</td>
+											<td> <button type="button" class="btn btn-detail" data-toggle="modal"
+													data-target=".bd-example-modal-xl">Details</button></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>2023</td>
+											<td> <button type="button" class="btn btn-detail" data-toggle="modal"
+													data-target=".bd-example-modal-xl">Details</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Row ends -->
+				<!-- Modal starts -->
+
+
+
+				<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
+					aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-xl">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="myExtraLargeModalLabel">Board General results divided by level</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row gutters">
+									<div class="col-sm-12">
+										<div class="table-container">
+											<div class="t-header">2023</div>
+											<div class="table-responsive">
+												<table id="fixedHeader" class="table custom-table">
+													<thead>
+														<tr>
+															<th>General results divided by level</th>
+															<th>Level 1</th>
+															<th>Level 2</th>
+															<th>Level 3</th>
+															<th>Level 4</th>
+															<th>Level 5</th>
+															<th>Total Criterias</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Number of criteria achieved</td>
+															<td>0</td>
+															<td>1</td>
+															<td>6</td>
+															<td>23</td>
+															<td>49</td>
+															<td>79</td>
+														</tr>
+														<tr>
+															<td>Percentage of criteria achieved</td>
+															<td>0.00</td>
+															<td>1.27</td>
+															<td>7.59</td>
+															<td>29.11</td>
+															<td>62.03</td>
+															<td>79</td>
+														</tr>
+								
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-delete" data-dismiss="modal">Close</button>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--  starts -->
+
+
+
+			</div>
+			<!-- Main container end -->
+
+		</div>
+		<!-- Page content end -->
+
+	</div>
+	<!-- Page wrapper end -->
+
+	<div th:replace="admin/fragments/script::script"></div>
+
+</body>
+
+</html>
