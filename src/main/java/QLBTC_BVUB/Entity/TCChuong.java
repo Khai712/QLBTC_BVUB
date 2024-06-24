@@ -23,6 +23,9 @@ public class TCChuong {
     @Size( min = 1, message =  ErrorDB.DB_500CHARACTERS)
     private String noidung;
 
+    @Column(name = "machuong")
+    @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
+    private String machuong;
     @ManyToOne
     @JoinColumn(name = "tcphan_id", referencedColumnName = "id", nullable = false)
     private TCPhan tcPhan;

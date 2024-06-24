@@ -22,6 +22,11 @@ public class TCPhan {
     @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
     @Size( min = 1, message =  ErrorDB.DB_500CHARACTERS)
     private String noidung;
+
+    @Column(name = "maphan")
+    @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
+    private String maphan;
+
     //--------------------------Relationship------------------------
 
     @OneToMany(mappedBy = "tcPhan")

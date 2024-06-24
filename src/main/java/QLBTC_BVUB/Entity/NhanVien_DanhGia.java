@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -18,17 +19,17 @@ public class NhanVien_DanhGia implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "danhgiaId")
-    private DanhGia danhGiaid;
+    private DanhGia danhGia;
 
     @ManyToOne
     @JoinColumn(name = "nhanvienId")
-    private NhanVien nhanVienid;
+    private NhanVien nhanVien;
 
     @Column(name = "ngaydanhgia")
     private LocalDateTime ngaydanhgia;
 
     @OneToMany(mappedBy = "nhanVienDanhGia")
-    private Set<Anh> anhs_danhgia;
+    private List<Anh> anhs_danhgia;
 
 }
 

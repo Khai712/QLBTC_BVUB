@@ -1,0 +1,1128 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+
+    <!-- Sidebar wrapper start -->
+    <div th:replace="admin/fragments/sidebar::sidebar"></div>
+    <!-- Sidebar wrapper end -->
+
+    <!-- Page content start  -->
+    <div class="page-content">
+
+        <!-- Header start -->
+        <div th:replace="admin/fragments/header::header"></div>
+        <!-- Header end -->
+
+        <!-- Page header start -->
+        <div class="page-header">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Dashboards</li>
+
+            </ol>
+
+            <ul class="app-actions">
+                <li>
+                    <a href="#" id="reportrange">
+                        <span class="range-text"></span>
+                        <i class="icon-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+                        <i class="icon-print"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tooltip" data-placement="top" title=""
+                       data-original-title="Download CSV">
+                        <i class="icon-cloud_download"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Page header end -->
+
+        <!-- Main container start -->
+        <div class="main-container">
+
+            <!-- Row start -->
+            <div class="row gutters">
+                <div class="col-sm-12">
+
+                    <div class="table-container">
+                        <div class="t-header">Content of Items A1.1</div>
+                        <div class="table-responsive">
+                            <table id="basicExample" class="table custom-table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">Index</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Witness</th>
+                                    <th scope="col">Change</th>
+                                    <th scope="col">Delete</th>
+                                    <!-- <th scope="col">Details</th> -->
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>Thiếu biển hiệu bệnh viện hoặc biển hiệu bị mất chữ, mất
+                                        nét, méo, xệ.
+                                    </td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>Chưa có bàn/quầy và nhân viên đón tiếp, hướng dẫn người
+                                        bệnh.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>3</td>
+                                    <td>Giá tiền trông xe ghi không rõ ràng hoặc có dấu hiệu tẩy
+                                        xóa, thay đổi
+                                        liên tục.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>4</td>
+                                    <td>Giá tiền trông xe thu cao hơn giá theo các quy định
+                                        hiện hành.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>Biển hiệu bệnh viện tại cổng chính và cổng đón người
+                                        bệnh đầy đủ, rõ
+                                        ràng, không bị mất chữ hoặc mất nét, méo, xệ.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>Trong phạm vi từ 50 - 500m có biển báo bệnh viện tại
+                                        trục đường chính
+                                        hướng đến cổng chính (cổng số 1) của bệnh
+                                        viện.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>7</td>
+                                    <td>Trước các lối rẽ từ đường chính vào đường nhỏ có biển
+                                        báo bệnh viện
+                                        (trong trường hợp bệnh viện không nằm ở trục đường
+                                        chính).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>8</td>
+                                    <td>Cổng bệnh viện được đánh số: nếu bệnh viện có một cổng
+                                        không đánh số;
+                                        nếu có từ 2 cổng trở lên thì cổng chính tiếp đón
+                                        người bệnh ghi rõ “Cổng số 1”. Các cổng phụ ghi rõ từng
+                                        số theo một
+                                        chiều thống nhất từ trái sang phải hoặc từ phải sang
+                                        trái. Đối với cổng nội bộ có chỉ dẫn rõ ràng “cổng nội
+                                        bộ cho nhân viên
+                                        bệnh viện”.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>9</td>
+                                    <td>Có biển báo chỉ dẫn đến bãi trông giữ xe trong khuôn
+                                        viên bệnh viện hoặc
+                                        ngoài khuôn viên (nếu có); đồng thời có biển
+                                        thông báo “đã đầy xe” hoặc “không nhận trông xe” rõ ràng
+                                        ngay từ cổng
+                                        bệnh viện, phù hợp với sức chứa của bãi trông giữ
+                                        xe theo từng thời điểm.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td>Có bàn hoặc quầy đón tiếp, hướng dẫn người bệnh.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>11</td>
+                                    <td>Bàn tiếp đón ở vị trí thuận tiện cho người bệnh tiếp
+                                        cận, có biển hiệu
+                                        rõ ràng.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>12</td>
+                                    <td>Bàn tiếp đón có nhân viên y tế (mặc đồng phục và mang
+                                        biển tên hoặc đeo
+                                        băng vải để người bệnh dễ nhận biết) trực thường
+                                        xuyên (trong giờ hành chính) tiếp đón, hướng dẫn và giải
+                                        đáp cho người
+                                        bệnh.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>13</td>
+                                    <td>Trong phạm vi từ 50 – 500m có biển báo bệnh viện tại đầy
+                                        đủ các hướng
+                                        đến bệnh viện hoặc tại các lối rẽ đến bệnh viện
+                                        (đối với bệnh viện nằm trong thành phố có biển báo tại
+                                        trục đường chính
+                                        hướng đến bệnh viện).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>14</td>
+                                    <td>Các điểm trông giữ xe nằm trong khuôn viên bệnh viện có
+                                        biển báo rõ
+                                        ràng.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>Địa điểm trông giữ xe máy và xe đạp có ranh giới phân
+                                        khu vực riêng bằng
+                                        hàng rào, dây chắn…</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>16</td>
+                                    <td>Địa điểm trông giữ ô tô có hướng dẫn trông giữ ô tô
+                                        (nếu có cần
+                                        hướng dẫn các chiều vào – ra hoặc lên – xuống bằng
+                                        vạch sơn hoặc biển hướng dẫn).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>17</td>
+                                    <td>Thời gian trông giữ xe được ghi cụ thể.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>18</td>
+                                    <td>Giá tiền trông giữ xe được chia theo thời gian trong
+                                        ngày (ngày-đêm
+                                        hoặc giờ), được công bố rõ ràng, cụ thể (không gạch
+                                        xóa) và không cao hơn giá theo các quy định hiện hành
+                                        (của Chính phủ và
+                                        chính quyền địa phương), hoặc miễn phí.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>19</td>
+                                    <td>Biển báo giá tiền trông giữ xe (hoặc miễn phí) được
+                                        treo, đặt ở vị trí
+                                        cố định ở nơi dễ nhìn thấy.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>20</td>
+                                    <td>Bảo đảm thu tiền trông giữ xe không cao hơn giá đã
+                                        niêm yết của
+                                        bệnh viện.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>21</td>
+                                    <td>Có sơ đồ bệnh viện cụ thể, chú thích, chỉ dẫn rõ ràng
+                                        tại chỗ dễ quan
+                                        sát ở khu vực cổng chính và khoa khám bệnh; có
+                                        dấu hiệu hoặc chỉ dẫn vị trí người xem sơ đồ đang đứng
+                                        ở vị trí nào
+                                        trong sơ đồ; chữ viết đủ kích thước cho người
+                                        có thị lực</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>22</td>
+                                    <td>Các tòa nhà được đánh dấu theo chữ viết hoa (A, B, C…),
+                                        hoặc số 1, 2,
+                                        3… hoặc tên khoa (khoa Nội, khoa Ngoại…) rõ ràng,
+                                        tối thiểu đầy đủ các mặt trước của tòa nhà và các mặt
+                                        sau (nếu nhìn thấy
+                                        được trong khuôn viên bệnh viện).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>23</td>
+                                    <td>Có đầy đủ bàn hoặc quầy đón tiếp, hướng dẫn người bệnh
+                                        tại tất cả các
+                                        cổng có tiếp nhận người bệnh.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>25</td>
+                                    <td>Số buồng bệnh được đánh số theo quy tắc thống nhất do
+                                        bệnh viện tự quy
+                                        định, thuận tiện cho việc tìm kiếm.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>26</td>
+                                    <td>Biển số buồng bệnh và biển chỉ dẫn số buồng bệnh ở vị
+                                        trí dễ nhìn.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>27</td>
+                                    <td>Ô tô, xe máy, xe đạp được đỗ đúng nơi quy định của bệnh
+                                        viện.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>28</td>
+                                    <td>Cầu thang bộ và thang máy (nếu có) được đánh số rõ
+                                        ràng, theo trình tự
+                                        do bệnh viện tự quy định.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>29</td>
+                                    <td>Trong thang máy có biển ghi thông tin các khoa, phòng
+                                        của từng tầng và
+                                        số thang máy để người bệnh thuận tiện, an toàn
+                                        khi di chuyển (nếu bệnh viện không có thang máy được
+                                        tính là đạt).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>30</td>
+                                    <td>Trước mỗi cửa buồng khám, chữa bệnh có bảng tên các bác
+                                        sỹ, điều dưỡng
+                                        phụ trách.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>31</td>
+                                    <td>Khoa khám bệnh có vạch màu hoặc dấu hiệu, chữ viết… được
+                                        dán hoặc gắn,
+                                        sơn kẻ dưới sàn nhà hướng dẫn người bệnh đến các
+                                        địa điểm thực hiện các công việc khác nhau như đến phòng
+                                        xét nghiệm,
+                                        chụp X-Quang, siêu âm, điện tim, nộp viện phí, khu
+                                        vệ sinh…</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>32</td>
+                                    <td>Có đầy đủ sơ đồ bệnh viện tại các điểm giao cắt chính
+                                        trong bệnh viện;
+                                        có dấu hiệu hoặc chỉ dẫn vị trí người xem sơ đồ
+                                        đang đứng ở vị trí nào trong sơ đồ.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>33</td>
+                                    <td>Cầu thang của tòa nhà ghi rõ phạm vi của khoa và phạm vi
+                                        số phòng.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>34 </td>
+                                    <td>Biển tên khoa/phòng được viết bằng tối thiểu hai thứ
+                                        tiếng Việt, Anh
+                                        trên phạm vi toàn bệnh viện (có thể thêm tiếng thứ
+                                        ba tùy nhu cầu bệnh viện).</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>35</td>
+                                    <td>Áp dụng thẻ điện tử và máy tính giá tiền trông giữ xe
+                                        máy, ô tô hoặc
+                                        bệnh viện trông xe miễn phí.</td>
+
+                                    <td>
+                                        <section class="task-list">
+                                            <!-- Task #1 -->
+                                            <div class="task-block">
+                                                <div class="task-checkbox">
+                                                    <input type="checkbox" name="task_00">
+                                                    <div class="ripple-container">
+                                                        <div class="check-off">
+                                                        </div>
+                                                        <div class="check-on">
+                                                            <i class="icon-check1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </td><td><button class="btn btn-detail" data-toggle="modal"
+                                                     data-target="#ChangefooterCenterBtnsModal">Change</button></td>
+                                    <td><button class="btn btn-delete">Delete</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="/details-chapter"><button type="button"
+                                                                  class="btn btn-detail btn-lg">Back</button></a>
+                            <button type="button" class="btn btn-detail" data-toggle="modal"
+                                    data-target="#footerCenterBtnsModal">
+                                Addition
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Start Modal change -->
+                    <div class="modal fade" id="ChangefooterCenterBtnsModal" tabindex="-1" role="dialog"
+                         aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ChangefooterCenterBtnsModalLabel">Change Content
+                                        Evaluation</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="zIp">Level</label>
+                                            <input type="number" class="form-control" id="zIp"
+                                                   placeholder="Enter Level">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Description Content
+                                                Evaluation</label>
+                                            <textarea class="form-control" id="message-text"
+                                                      placeholder="Enter Description Content Evaluation"></textarea>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-delete" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-detail">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End Modal change -->
+                    <!-- Start Modal addition -->
+                    <div class="modal fade" id="footerCenterBtnsModal" tabindex="-1" role="dialog"
+                         aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="footerCenterBtnsModalLabel">Addtion Item</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="zIp">Level</label>
+                                            <input type="number" class="form-control" id="zIp"
+                                                   placeholder="Enter Level">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Description Content
+                                                Evaluation</label>
+                                            <textarea class="form-control" id="message-text"
+                                                      placeholder="Enter Description Content Evaluation"></textarea>
+                                        </div>
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" checked
+                                                   id="customSwitch3">
+                                            <label class="custom-control-label"
+                                                   for="customSwitch3">Witness</label>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-delete"
+                                            data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-detail">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Modal addition -->
+
+                </div>
+            </div>
+            <!-- Row end -->
+
+        </div>
+        <!-- Main container end -->
+
+    </div>
+    <!-- Page content end -->
+
+</div>
+<!-- Page wrapper end -->
+
+<div th:replace="admin/fragments/script::script"></div>
+
+</body>
+
+</html>

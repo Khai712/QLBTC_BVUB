@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Set;
 
 import static QLBTC_BVUB.Error.SetSizeNvarchar.DB_NVARCHARMAX;
@@ -23,11 +24,15 @@ public class TieuMuc {
     @Size( min = 1, message =  ErrorDB.DB_500CHARACTERS)
     private String noidung;
 
+    @Column(name = "matieumuc")
+    @NotEmpty(message = ErrorDB.DB_CONTENTEMPTY)
+    private String matieumuc;
+
     @ManyToOne
     @JoinColumn(name = "tcchuong_id", referencedColumnName = "id", nullable = false)
     private TCChuong tcChuong;
     //--------------------------Relationship------------------------
 
-    @OneToMany(mappedBy = "tieuMuc_id")
-    private Set<DanhGia> danhGias;
+    @OneToMany(mappedBy = "tieuMuc")
+    private List<DanhGia> danhGias;
 }

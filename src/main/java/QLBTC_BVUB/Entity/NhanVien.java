@@ -12,6 +12,7 @@ import lombok.Getter;
 
 import java.sql.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static QLBTC_BVUB.Error.SetSizeNvarchar.DB_NVARCHARMAX;
@@ -86,10 +87,10 @@ public class NhanVien {
 
     //--------------------------Relationship------------------------
 
-    @OneToMany(mappedBy = "nhanVienid")
+    @OneToMany(mappedBy = "nhanVien")
     private Set<NhanVien_DanhGia> nhanVien_danhGias;
 
-    @OneToMany(mappedBy = "nhanVien_id")
-    private Set<DanhGia> taodanhGias;
+    @OneToMany(mappedBy = "nhanVien")
+    private List<DanhGia> taodanhGias;
 
 }

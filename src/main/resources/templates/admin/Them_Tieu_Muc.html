@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Table with Spring Boot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+<h2>Table with Spring Boot</h2>
+
+<form id="form" th:action="@{/them-tieu-muc}" method="post" enctype="application/x-www-form-urlencoded">
+    <select class="js-example-basic-single" name="state" id="mucSelect">
+        <option value="">Chọn Mục</option>
+        <option th:each="Muc : ${Mucs}" th:value="${Muc.id}" th:text="${Muc.noidung}"></option>
+    </select>
+
+    <button type="button" onclick="addEmptyRow()">Thêm dòng</button>
+    <button type="button" onclick="submitForm()" id="saveBtn" style="display: none;">Lưu</button>
+
+    <br>
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Mục</th>
+            <th>Nội Dung</th>
+            <th>Phòng Ban</th>
+            <th>Hành động</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tieuMuc, stat : ${danhGias}">
+            <td>
+                <input type="hidden" th:name="'danhGias[' + ${stat.index} + '].tieuMuc_id'" th:value="${tieuMuc.tieuMuc_id}">
+                <input type="text" th:name="'danhGias[' + ${stat.index} + '].muc'" th:value="${tieuMuc.muc}">
+            </td>
+            <td><input type="text" th:name="'danhGias[' + ${stat.index} + '].noiDung'" th:value="${tieuMuc.noiDung}"></td>
+            <td>
+                <select class="js-example-basic-single" th:name="'danhGias[' + ${stat.index} + '].phongBan_id'">
+                    <option value="">Chọn phòng ban</option>
+                    <option th:each="pb : ${phongban}" th:value="${pb.id}" th:text="${pb.tenpb}" th:selected="${pb.id == tieuMuc.phongBan_id}"></option>
+                </select>
+            </td>
+            <td><button type="button" onclick="deleteRow(this)">Xóa</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Temporary storage for phongban options -->
+    <div id="phongban-options" style="display: none;">
+        <select>
+            <option th:each="pb : ${phongban}" th:value="${pb.id}" th:text="${pb.tenpb}"></option>
+        </select>
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script>
+    function addEmptyRow() {
+        var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var rowIndex = table.rows.length - 1;
+        var mucSelect = document.getElementById("mucSelect").value;
+
+        // Kiểm tra nếu người dùng chưa chọn mục
+        if (!mucSelect) {
+            alert("Vui lòng chọn mục trước khi thêm dòng.");
+            return;
+        }
+
+        var selectedMucId = document.getElementById("mucSelect").value;
+        cell1.innerHTML = `
+            <input type='hidden' name='danhGias[${rowIndex}].tieuMuc_id' value='${mucSelect}'>
+            <input type='text' name='danhGias[${rowIndex}].muc'>
+        `;
+        cell2.innerHTML = "<input type='text' name='danhGias[" + rowIndex + "].noiDung'>";
+        cell3.innerHTML = "<select class='js-example-basic-single' name='danhGias[" + rowIndex + "].phongBan_id'>" +
+            document.getElementById("phongban-options").querySelector("select").innerHTML +
+            "</select>";
+        cell4.innerHTML = "<button type='button' onclick='deleteRow(this)'>Xóa</button>";
+
+        document.getElementById("saveBtn").style.display = "block";
+
+        // Cập nhật Select2 cho các tùy chọn mới
+        $('.js-example-basic-single').select2();
+    }
+
+    function deleteRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+
+        // Kiểm tra nếu bảng rỗng và ẩn nút Lưu
+        var table = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+        if (table.rows.length === 0) {
+            document.getElementById("saveBtn").style.display = "none";
+        }
+    }
+
+    function submitForm() {
+        var form = document.getElementById("form");
+        form.submit();
+    }
+
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
+</body>
+</html>

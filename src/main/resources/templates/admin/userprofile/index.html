@@ -1,0 +1,194 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/fragments/head::head"></head>
+
+<body>
+
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+
+	<!-- Sidebar wrapper start -->
+	<div th:replace="admin/fragments/sidebar::sidebar"></div>
+	<!-- Sidebar wrapper end -->
+
+	<!-- Page content start  -->
+	<div class="page-content">
+
+		<!-- Header start -->
+		<div th:replace="admin/fragments/header::header"></div>
+		<!-- Header end -->
+
+		<!-- Page header start -->
+		<div class="page-header">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">User Profile</li>
+			</ol>
+
+			<ul class="app-actions">
+				<li>
+					<a href="#" id="reportrange">
+						<span class="range-text"></span>
+						<i class="icon-chevron-down"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print">
+						<i class="icon-print"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" data-toggle="tooltip" data-placement="top" title=""
+					   data-original-title="Download CSV">
+						<i class="icon-cloud_download"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Page header end -->
+
+		<!-- Main container start -->
+		<div class="main-container">
+
+			<!-- Row start -->
+			<div class="row gutters">
+				<div class="col-sm-12">
+
+					<div class="table-container">
+						<div class="t-header">Danh Sách Tài Khoản</div>
+						<div class="table-responsive">
+							<table id="basicExample" class="table custom-table">
+								<thead>
+								<tr>
+									<th>STT</th>
+									<th>ID</th>
+									<th>Họ và Tên</th>
+									<th>Giới Tính</th>
+									<th>Phòng Ban</th>
+									<th>Sửa</th>
+									<th>Xóa</th>
+									<th>Thông Tin</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr th:each="user, iterStat : ${users}">
+									<td th:text="${iterStat.count}"></td>
+									<td th:text="${user.getId()}"></td>
+									<td th:text="${user.getTennv()}"></td>
+									<td th:text="${user.getGioitinh()}"></td>
+									<td th:text="${user.phongBan.getTenpb()}"></td>
+									<td>
+										<!-- Nút Sửa -->
+										<button class="btn btn-edit" th:data-id="${user.getId()}" >Sửa</button>
+									</td>
+									<td>
+									<form th:action="@{/userprofile/deleteStaffDetails/{id}(id=${user.id})}" method="post">
+										<button   type="submit" class="btn btn-delete">Delete</button>
+									</form>
+
+									</td>
+									<td>
+										<!-- Nút Chi tiết -->
+										<button type="button" class="btn btn-detail-modal" th:data-id="${user.getId()}">Thông Tin</button>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- Modal details -->
+							<div th:replace="admin/fragments/modalUserprofiles :: modalUserprofileFragment"></div>
+                            <!-- End modal details -->
+						<!-- Modal change -->
+
+						<div class="modal fade" id="modalEditUserprofile" tabindex="-1" role="dialog"
+							 aria-labelledby="modalEditUserprofileLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="modalEditUserprofileLabel">Change Staffs</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+			<!--	<div th:replace="admin/fragments/modalEditUserprofiles :: modalEditUserprofileFragment"></div>-->
+								</div>
+							</div>
+						</div>
+					<!--End Modal change -->
+
+						<button type="button" class="btn btn-detail" data-toggle="modal"
+								data-target="#footerCenterBtnsModal"   onclick="window.location.href='/userprofile/addStaffDetails'">
+							Thêm mới
+						</button>
+						<!-- Modal addition
+ -->						<div class="modal fade" id="footerCenterBtnsModal" tabindex="-1" role="dialog"
+								 aria-labelledby="footerCenterBtnsModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="footerCenterBtnsModalLabel">Addtion Staffs</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row <div th:replace="admin/fragments/modalAddUser :: modalAddUserFragment"></div>	 end -->
+
+		</div>
+		<!-- Main container end -->
+
+	</div>
+	<!-- Page content end -->
+
+</div>
+<!-- Page wrapper end -->
+
+<div th:replace="admin/fragments/script::script"></div>
+
+<script th:inline="javascript">
+	$(document).ready(function () {
+		// Xử lý khi click vào nút "Thông tin" trong bảng
+		$('.btn-detail-modal').click(function () {
+			var userId = $(this).data('id'); // Lấy user ID từ thuộc tính data-id
+			$.ajax({
+				type: 'GET',
+				url: '/userprofile/viewStaffDetails/' + userId,
+				success: function (data) {
+					$('.modal-body').html(data); // Thay thế nội dung modal với HTML trả về
+					$('.bd-example-modal-xl').modal('show'); // Hiển thị modal
+				},
+				error: function () {
+					alert('Lỗi khi tải chi tiết nhân viên');
+				}
+			});
+		});
+		$(document).ready(function () {
+			$('.btn-edit').click(function () {
+				var userId = $(this).data('id');
+				$.ajax({
+					type: 'GET',
+					url: '/userprofile/editStaffDetails/' + userId,
+					success: function (data) {
+						$('#modalEditUserprofile .modal-content').html(data);
+						$('#modalEditUserprofile').modal('show');
+					},
+					error: function (xhr, status, error) {
+						console.error('Error loading edit modal:', error);
+						alert('Error loading edit form. Please try again.');
+					}
+				});
+			});
+		});
+
+
+
+	});
+</script>
+
+</body>
+</html>

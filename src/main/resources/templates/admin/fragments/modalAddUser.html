@@ -1,0 +1,78 @@
+
+            <form th:fragment="modalAddUserFragment"  th:object="${nhanvien}"  th:action="@{/userprofile/addStaffDetails}" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="row gutters">
+                        <div class="col-sm-6 col-12">
+                            <!-- Other form fields for NhanVien properties -->
+                            <div class="form-group">
+                                <label for="fullName">Họ và Tên</label>
+                                <input th:field="*{tennv}" type="text" class="form-control" id="fullName"   placeholder="Enter full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Giới tính</label>
+                                <select class="form-control" id="gender" th:field="*{gioitinh}" >
+                                    <option value="NAM">NAM</option>
+                                    <option value="NU">NU</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Quê Quán</label>
+                                <input type="text" class="form-control" id="address" th:field="*{quequan}"  placeholder="Enter Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" th:field="*{SDT}"   placeholder="Enter phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="machucvu">Mã Chức Vụ</label>
+                                <input type="text" class="form-control" id="machucvu" th:field="*{machucvu}"   >
+                            </div>
+                            <div class="form-group">
+                                <label for="tencv">Tên Chức Vụ</label>
+                                <input type="text" class="form-control" id="tencv" th:field="*{tencv}"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="identification">Căn Cước Công Dân</label>
+                                <input type="text" class="form-control" id="identification" th:field="*{CCCD}"   placeholder="Enter identification number">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="department">Phòng Ban</label>
+                                <select class="form-control" id="department" th:field="*{phongBan.id}">
+                                    <option th:each="department : ${phongban}" th:value="${department.id}" th:text="${department.tenpb}"></option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="text" class="form-control datepicker-set-years" id="dob" th:field="*{ngaysinh}" placeholder="Choose Date of Birth">
+                            </div>
+                            <div class="form-group">
+                                <label for="avatar">Upload Avatar</label>
+                                <input type="file" class="form-control-file" id="avatar" th:field="*{avatarUserFileName}">
+                            </div>
+                            <div class="form-group">
+                                <label for="userName">Username</label>
+                                <input type="text" class="form-control" id="userName" th:field="*{username}"  placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" th:field="*{password}" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-delete" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-detail">Save</button>
+                </div>
+            </form>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-delete"
+                        data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-detail">Save</button>
+            </div>
